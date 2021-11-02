@@ -27,7 +27,7 @@
             </UniformGrid>
             <UniformGrid Columns="1" Rows="3" Grid.Column="1">
                 <TextBox x:Name="TxtFindedTourName" TextChanged="TxtFindedTourName_TextChanged" Height="30" Width="200" HorizontalAlignment="Left"></TextBox>
-                <ComboBox Name="CmbType" SelectionChanged="CmbType_SelectionChanged" Height="30" Width="200" HorizontalAlignment="Left"></ComboBox>
+                <ComboBox Name="CmbType" SelectionChanged="CmbType_SelectionChanged" Height="30" Width="200" HorizontalAlignment="Left" DisplayMemberPath="Name"></ComboBox>
                 <CheckBox x:Name="ChbActual" Content="только актуальные туры" Checked="ChbActual_Checked" Unchecked="ChbActual_Unchecked" Height="30" Width="200" HorizontalAlignment="Left"></CheckBox>
             </UniformGrid>
         </Grid>

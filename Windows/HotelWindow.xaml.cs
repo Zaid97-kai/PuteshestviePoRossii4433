@@ -79,7 +79,7 @@ namespace PuteshestviePoRossii4433.Windows
         /// <param name="e"></param>
         private void TxtCurrentPageNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if(_currentPage > 0 && _currentPage < _maxPage && TxtCurrentPageNumber.Text != "")
+            if(_currentPage > 0 && _currentPage <= _maxPage && TxtCurrentPageNumber.Text != "")
             {
                 _currentPage = Convert.ToInt32(TxtCurrentPageNumber.Text);
                 RefreshHotels();

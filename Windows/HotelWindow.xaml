@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:PuteshestviePoRossii4433.Windows"
         mc:Ignorable="d"
         Title="Окно отелей" Height="600" Width="1000" MinHeight="600" MinWidth="1000">
-    <Grid>
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="PaginationButton">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Foreground" Value="#bae3e8"></Setter>
+            <Setter Property="FontSize" Value="40"></Setter>
+            <Setter Property="BorderBrush" Value="White"></Setter>
+        </Style>
+    </Window.Resources>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
@@ -28,12 +36,12 @@
         </DataGrid>
         <WrapPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel x:Name="PaginationPanel" Orientation="Horizontal">
-                <Button x:Name="GoFirstPageButton" Content="&lt;&lt;" FontSize="30" Click="GoFirstPageButton_Click"></Button>
-                <Button x:Name="GoPrevPageButton" Content="&lt;" FontSize="30" Click="GoPrevPageButton_Click" Margin="40 0 0 0"></Button>
+                <Button x:Name="GoFirstPageButton" Content="&lt;&lt;" FontSize="30" Click="GoFirstPageButton_Click" Style="{StaticResource PaginationButton}"></Button>
+                <Button x:Name="GoPrevPageButton" Content="&lt;" FontSize="30" Click="GoPrevPageButton_Click" Margin="40 0 0 0" Style="{StaticResource PaginationButton}"></Button>
                 <TextBox x:Name="TxtCurrentPageNumber" TextChanged="TxtCurrentPageNumber_TextChanged" Width="50" Margin="40 0 0 0"></TextBox>
                 <Label Name="LblTotalPages" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="40 0 0 0"></Label>
-                <Button x:Name="GoNextPageButton" Content="&gt;" FontSize="30" Click="GoNextPageButton_Click" Margin="40 0 0 0"></Button>
-                <Button x:Name="GoLastPageButton" Content="&gt;&gt;" FontSize="30" Click="GoLastPageButton_Click" Margin="40 0 0 0"></Button>
+                <Button x:Name="GoNextPageButton" Content="&gt;" FontSize="30" Click="GoNextPageButton_Click" Margin="40 0 0 0" Style="{StaticResource PaginationButton}"></Button>
+                <Button x:Name="GoLastPageButton" Content="&gt;&gt;" FontSize="30" Click="GoLastPageButton_Click" Margin="40 0 0 0" Style="{StaticResource PaginationButton}"></Button>
             </StackPanel>
             <Button x:Name="BtnAddHotel" Click="BtnAddHotel_Click" Content="Добавить отель" Margin="40 0 0 0"></Button>
         </WrapPanel>

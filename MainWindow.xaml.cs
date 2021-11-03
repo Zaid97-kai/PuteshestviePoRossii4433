@@ -97,5 +97,11 @@ namespace PuteshestviePoRossii4433
             _tours = _context.Tour.OrderBy(t => t.Name).ToList();
             RefreshTours();
         }
+
+        private void BtnShowHotelWindow_Click(object sender, RoutedEventArgs e)
+        {
+            Windows.HotelWindow window = new Windows.HotelWindow();
+            window.ShowDialog();
+        }
     }
 }
